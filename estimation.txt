@@ -1,0 +1,39 @@
+ESTIMACIÓN DE COMPLEJIDAD DE OPERACIONES
+
+Operaciones en Heap:
+-------------------------
+1. Inserción (add) en Heap:
+   - Descripción: Agrega un nuevo elemento al heap y ajusta su posición para mantener la propiedad del heap.
+   - Complejidad: O(log n), donde n es el número de elementos en el heap.
+
+2. Eliminación de la raíz (poll) en Heap:
+   - Descripción: Extrae el elemento más prioritario (el primero en el heap) y reajusta el árbol.
+   - Complejidad: O(log n).
+
+3. Obtener tamaño (size) del Heap:
+   - Descripción: Devuelve la cantidad de elementos almacenados en el heap.
+   - Complejidad: O(1).
+
+Operaciones en Pizzería:
+-------------------------
+1. Recibir pedido (agregarPedido):
+   - Descripción: Añade un nuevo pedido a la heap de pedidos recibidos.
+   - Complejidad: O(log n), donde n es el número de pedidos en el heap.
+
+2. Atender pedido (atenderPedido):
+   - Descripción: Extrae el pedido más caro del heap de pedidos recibidos.
+   - Complejidad: O(log n).
+
+3. Despachar pedido (despacharPedido):
+   - Descripción: Atender el pedido (extraerlo del heap de pedidos recibidos) y agregarlo al heap de cola de despachos.
+   - Complejidad: O(log n).
+
+4. Visualizar colas (pedidosRecibidosList y colaDespachosList):
+   - Descripción: Convierte el heap en una lista de pedidos.
+   - Complejidad: O(n), donde n es el número de elementos en el heap.
+
+Conclusiones:
+-------------
+La mayoría de las operaciones de la pizzería se basan en las operaciones de un heap, que tienen una complejidad logarítmica en la mayoría de los casos. Las operaciones de visualización de colas, sin embargo, requieren iterar sobre todos los elementos en el heap, lo que implica una complejidad lineal.
+
+En general, las operaciones relacionadas con los pedidos (agregar, atender, despachar) están optimizadas en términos de complejidad, ya que las operaciones de heap funcionan en O(log n), lo que es eficiente incluso con un número grande de pedidos.
